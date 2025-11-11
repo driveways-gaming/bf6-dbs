@@ -1,0 +1,2768 @@
+{
+    "Portal_Dynamic": [
+        {
+            "name": "TEAM_1_HQ",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 1,
+            "InfantrySpawns": [
+                "TEAM_1_HQ/SpawnPoint_1_1",
+                "TEAM_1_HQ/SpawnPoint_1_2",
+                "TEAM_1_HQ/SpawnPoint_1_3",
+                "TEAM_1_HQ/SpawnPoint_1_4"
+            ],
+            "HQArea": "TEAM_1_HQ/HQ_Team1",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -216.984,
+                "y": 138.472,
+                "z": 230.02
+            },
+            "id": "TEAM_1_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "HQ_Team1",
+            "type": "PolygonVolume",
+            "id": "TEAM_1_HQ/HQ_Team1",
+            "height": 0,
+            "points": [
+                {
+                    "x": -211.984,
+                    "y": 143.472,
+                    "z": 235.02
+                },
+                {
+                    "x": -211.984,
+                    "y": 143.472,
+                    "z": 225.02
+                },
+                {
+                    "x": -221.984,
+                    "y": 143.472,
+                    "z": 225.02
+                },
+                {
+                    "x": -221.984,
+                    "y": 143.472,
+                    "z": 235.02
+                }
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.424342,
+                "y": 0,
+                "z": -0.905502
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.905502,
+                "y": 0,
+                "z": -0.424342
+            },
+            "position": {
+                "x": -216.984,
+                "y": 138.472,
+                "z": 227.02
+            },
+            "id": "TEAM_1_HQ/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.735388,
+                "y": 0,
+                "z": -0.677647
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.677647,
+                "y": 0,
+                "z": -0.735388
+            },
+            "position": {
+                "x": -213.984,
+                "y": 138.472,
+                "z": 230.02
+            },
+            "id": "TEAM_1_HQ/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.562949,
+                "y": 0,
+                "z": -0.826492
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.826492,
+                "y": 0,
+                "z": -0.562949
+            },
+            "position": {
+                "x": -219.984,
+                "y": 138.472,
+                "z": 230.02
+            },
+            "id": "TEAM_1_HQ/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.823869,
+                "y": 0,
+                "z": -0.56678
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.56678,
+                "y": 0,
+                "z": -0.823869
+            },
+            "position": {
+                "x": -216.984,
+                "y": 138.472,
+                "z": 233.02
+            },
+            "id": "TEAM_1_HQ/SpawnPoint_1_4"
+        },
+        {
+            "name": "AI_Spawner",
+            "type": "AI_Spawner",
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -216.984,
+                "y": 138.472,
+                "z": 230.02
+            },
+            "id": "TEAM_1_HQ/AI_Spawner"
+        },
+        {
+            "name": "TEAM_2_HQ",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 2,
+            "InfantrySpawns": [
+                "TEAM_2_HQ/SpawnPoint_2_1",
+                "TEAM_2_HQ/SpawnPoint_2_2",
+                "TEAM_2_HQ/SpawnPoint_2_3",
+                "TEAM_2_HQ/SpawnPoint_2_4"
+            ],
+            "HQArea": "TEAM_2_HQ/HQ_Team2",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -215.896,
+                "y": 138.671,
+                "z": 231.746
+            },
+            "id": "TEAM_2_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "HQ_Team2",
+            "type": "PolygonVolume",
+            "id": "TEAM_2_HQ/HQ_Team2",
+            "height": 0,
+            "points": [
+                {
+                    "x": -210.896,
+                    "y": 143.671,
+                    "z": 236.746
+                },
+                {
+                    "x": -210.896,
+                    "y": 143.671,
+                    "z": 226.746
+                },
+                {
+                    "x": -220.896,
+                    "y": 143.671,
+                    "z": 226.746
+                },
+                {
+                    "x": -220.896,
+                    "y": 143.671,
+                    "z": 236.746
+                }
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.888145,
+                "y": 0,
+                "z": -0.459565
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.459565,
+                "y": 0,
+                "z": -0.888145
+            },
+            "position": {
+                "x": -215.896,
+                "y": 138.671,
+                "z": 228.746
+            },
+            "id": "TEAM_2_HQ/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.844374,
+                "y": 0,
+                "z": -0.535753
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.535753,
+                "y": 0,
+                "z": -0.844374
+            },
+            "position": {
+                "x": -212.896,
+                "y": 138.671,
+                "z": 231.746
+            },
+            "id": "TEAM_2_HQ/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.73736,
+                "y": 0,
+                "z": -0.6755
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.6755,
+                "y": 0,
+                "z": -0.73736
+            },
+            "position": {
+                "x": -218.896,
+                "y": 138.671,
+                "z": 231.746
+            },
+            "id": "TEAM_2_HQ/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.760156,
+                "y": 0,
+                "z": -0.64974
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.64974,
+                "y": 0,
+                "z": -0.760156
+            },
+            "position": {
+                "x": -215.896,
+                "y": 138.671,
+                "z": 234.746
+            },
+            "id": "TEAM_2_HQ/SpawnPoint_2_4"
+        },
+        {
+            "name": "CombatArea",
+            "CombatVolume": "CombatArea/CombatVolume",
+            "type": "CombatArea",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -193.415,
+                "y": 136.643,
+                "z": 352.408
+            },
+            "id": "CombatArea",
+            "linked": [
+                "CombatVolume"
+            ]
+        },
+        {
+            "name": "CombatVolume",
+            "type": "PolygonVolume",
+            "id": "CombatArea/CombatVolume",
+            "height": 100,
+            "points": [
+                {
+                    "x": -436.071,
+                    "y": 126.643,
+                    "z": -102.4
+                },
+                {
+                    "x": -567.475,
+                    "y": 126.643,
+                    "z": -14.073
+                },
+                {
+                    "x": -601.549,
+                    "y": 126.643,
+                    "z": 225.66089
+                },
+                {
+                    "x": -566.282,
+                    "y": 126.643,
+                    "z": 491.459
+                },
+                {
+                    "x": -398.346,
+                    "y": 126.643,
+                    "z": 704.421
+                },
+                {
+                    "x": -102.6339,
+                    "y": 126.643,
+                    "z": 766.484
+                },
+                {
+                    "x": 145.618,
+                    "y": 126.643,
+                    "z": 652.093
+                },
+                {
+                    "x": 191.862,
+                    "y": 126.643,
+                    "z": 330.825
+                },
+                {
+                    "x": 162.679,
+                    "y": 126.643,
+                    "z": 129.5239
+                },
+                {
+                    "x": 56.807,
+                    "y": 126.643,
+                    "z": -14.073
+                },
+                {
+                    "x": -25.944,
+                    "y": 126.643,
+                    "z": -73.702
+                },
+                {
+                    "x": -277.871,
+                    "y": 126.643,
+                    "z": -144.992
+                }
+            ]
+        },
+        {
+            "name": "DeployCam",
+            "type": "DeployCam",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 0.101056,
+                "z": -0.994881
+            },
+            "front": {
+                "x": 0,
+                "y": 0.994881,
+                "z": 0.101056
+            },
+            "position": {
+                "x": -218.643,
+                "y": 501.636,
+                "z": 311.623
+            },
+            "id": "Camera3D/DeployCam"
+        },
+        {
+            "name": "AI_Spawner",
+            "type": "AI_Spawner",
+            "ObjId": 100,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner"
+        },
+        {
+            "name": "AI_Spawner2",
+            "type": "AI_Spawner",
+            "ObjId": 101,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner2"
+        },
+        {
+            "name": "AI_Spawner3",
+            "type": "AI_Spawner",
+            "ObjId": 102,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner3"
+        },
+        {
+            "name": "AI_Spawner4",
+            "type": "AI_Spawner",
+            "ObjId": 103,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner4"
+        },
+        {
+            "name": "AI_Spawner5",
+            "type": "AI_Spawner",
+            "ObjId": 104,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner5"
+        },
+        {
+            "name": "AI_Spawner6",
+            "type": "AI_Spawner",
+            "ObjId": 105,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner6"
+        },
+        {
+            "name": "AI_Spawner7",
+            "type": "AI_Spawner",
+            "ObjId": 106,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner7"
+        },
+        {
+            "name": "AI_Spawner8",
+            "type": "AI_Spawner",
+            "ObjId": 107,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner8"
+        },
+        {
+            "name": "AI_Spawner9",
+            "type": "AI_Spawner",
+            "ObjId": 108,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner9"
+        },
+        {
+            "name": "AI_Spawner10",
+            "type": "AI_Spawner",
+            "ObjId": 109,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner10"
+        },
+        {
+            "name": "AI_Spawner11",
+            "type": "AI_Spawner",
+            "ObjId": 110,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner11"
+        },
+        {
+            "name": "AI_Spawner12",
+            "type": "AI_Spawner",
+            "ObjId": 111,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner12"
+        },
+        {
+            "name": "AI_Spawner13",
+            "type": "AI_Spawner",
+            "ObjId": 112,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner13"
+        },
+        {
+            "name": "AI_Spawner14",
+            "type": "AI_Spawner",
+            "ObjId": 113,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner14"
+        },
+        {
+            "name": "AI_Spawner15",
+            "type": "AI_Spawner",
+            "ObjId": 114,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner15"
+        },
+        {
+            "name": "AI_Spawner16",
+            "type": "AI_Spawner",
+            "ObjId": 115,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner16"
+        },
+        {
+            "name": "AI_Spawner17",
+            "type": "AI_Spawner",
+            "ObjId": 116,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner17"
+        },
+        {
+            "name": "AI_Spawner18",
+            "type": "AI_Spawner",
+            "ObjId": 117,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner18"
+        },
+        {
+            "name": "AI_Spawner19",
+            "type": "AI_Spawner",
+            "ObjId": 118,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner19"
+        },
+        {
+            "name": "AI_Spawner20",
+            "type": "AI_Spawner",
+            "ObjId": 119,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner20"
+        },
+        {
+            "name": "AI_Spawner21",
+            "type": "AI_Spawner",
+            "ObjId": 120,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner21"
+        },
+        {
+            "name": "AI_Spawner22",
+            "type": "AI_Spawner",
+            "ObjId": 121,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner22"
+        },
+        {
+            "name": "AI_Spawner23",
+            "type": "AI_Spawner",
+            "ObjId": 122,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner23"
+        },
+        {
+            "name": "AI_Spawner24",
+            "type": "AI_Spawner",
+            "ObjId": 123,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner24"
+        },
+        {
+            "name": "AI_Spawner25",
+            "type": "AI_Spawner",
+            "ObjId": 124,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner25"
+        },
+        {
+            "name": "AI_Spawner26",
+            "type": "AI_Spawner",
+            "ObjId": 125,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner26"
+        },
+        {
+            "name": "AI_Spawner27",
+            "type": "AI_Spawner",
+            "ObjId": 126,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner27"
+        },
+        {
+            "name": "AI_Spawner28",
+            "type": "AI_Spawner",
+            "ObjId": 127,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner28"
+        },
+        {
+            "name": "AI_Spawner29",
+            "type": "AI_Spawner",
+            "ObjId": 128,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner29"
+        },
+        {
+            "name": "AI_Spawner30",
+            "type": "AI_Spawner",
+            "ObjId": 129,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner30"
+        },
+        {
+            "name": "AI_Spawner31",
+            "type": "AI_Spawner",
+            "ObjId": 130,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner31"
+        },
+        {
+            "name": "AI_Spawner32",
+            "type": "AI_Spawner",
+            "ObjId": 131,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner32"
+        },
+        {
+            "name": "AI_Spawner33",
+            "type": "AI_Spawner",
+            "ObjId": 132,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner33"
+        },
+        {
+            "name": "AI_Spawner34",
+            "type": "AI_Spawner",
+            "ObjId": 133,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner34"
+        },
+        {
+            "name": "AI_Spawner35",
+            "type": "AI_Spawner",
+            "ObjId": 134,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner35"
+        },
+        {
+            "name": "AI_Spawner36",
+            "type": "AI_Spawner",
+            "ObjId": 135,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner36"
+        },
+        {
+            "name": "AI_Spawner37",
+            "type": "AI_Spawner",
+            "ObjId": 136,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner37"
+        },
+        {
+            "name": "AI_Spawner38",
+            "type": "AI_Spawner",
+            "ObjId": 137,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner38"
+        },
+        {
+            "name": "AI_Spawner39",
+            "type": "AI_Spawner",
+            "ObjId": 138,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner39"
+        },
+        {
+            "name": "AI_Spawner40",
+            "type": "AI_Spawner",
+            "ObjId": 139,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner40"
+        },
+        {
+            "name": "AI_Spawner41",
+            "type": "AI_Spawner",
+            "ObjId": 140,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner41"
+        },
+        {
+            "name": "AI_Spawner42",
+            "type": "AI_Spawner",
+            "ObjId": 141,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner42"
+        },
+        {
+            "name": "AI_Spawner43",
+            "type": "AI_Spawner",
+            "ObjId": 142,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner43"
+        },
+        {
+            "name": "AI_Spawner44",
+            "type": "AI_Spawner",
+            "ObjId": 143,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner44"
+        },
+        {
+            "name": "AI_Spawner45",
+            "type": "AI_Spawner",
+            "ObjId": 144,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner45"
+        },
+        {
+            "name": "AI_Spawner46",
+            "type": "AI_Spawner",
+            "ObjId": 145,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner46"
+        },
+        {
+            "name": "AI_Spawner47",
+            "type": "AI_Spawner",
+            "ObjId": 146,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner47"
+        },
+        {
+            "name": "AI_Spawner48",
+            "type": "AI_Spawner",
+            "ObjId": 147,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner48"
+        },
+        {
+            "name": "AI_Spawner49",
+            "type": "AI_Spawner",
+            "ObjId": 148,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner49"
+        },
+        {
+            "name": "AI_Spawner50",
+            "type": "AI_Spawner",
+            "ObjId": 149,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner50"
+        },
+        {
+            "name": "AI_Spawner51",
+            "type": "AI_Spawner",
+            "ObjId": 150,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner51"
+        },
+        {
+            "name": "AI_Spawner52",
+            "type": "AI_Spawner",
+            "ObjId": 151,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner52"
+        },
+        {
+            "name": "AI_Spawner53",
+            "type": "AI_Spawner",
+            "ObjId": 152,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner53"
+        },
+        {
+            "name": "AI_Spawner54",
+            "type": "AI_Spawner",
+            "ObjId": 153,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner54"
+        },
+        {
+            "name": "AI_Spawner55",
+            "type": "AI_Spawner",
+            "ObjId": 154,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner55"
+        },
+        {
+            "name": "AI_Spawner56",
+            "type": "AI_Spawner",
+            "ObjId": 155,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner56"
+        },
+        {
+            "name": "AI_Spawner57",
+            "type": "AI_Spawner",
+            "ObjId": 156,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner57"
+        },
+        {
+            "name": "AI_Spawner58",
+            "type": "AI_Spawner",
+            "ObjId": 157,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner58"
+        },
+        {
+            "name": "AI_Spawner59",
+            "type": "AI_Spawner",
+            "ObjId": 158,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner59"
+        },
+        {
+            "name": "AI_Spawner60",
+            "type": "AI_Spawner",
+            "ObjId": 159,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner60"
+        },
+        {
+            "name": "AI_Spawner61",
+            "type": "AI_Spawner",
+            "ObjId": 160,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner61"
+        },
+        {
+            "name": "AI_Spawner62",
+            "type": "AI_Spawner",
+            "ObjId": 161,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner62"
+        },
+        {
+            "name": "AI_Spawner63",
+            "type": "AI_Spawner",
+            "ObjId": 162,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner63"
+        },
+        {
+            "name": "AI_Spawner64",
+            "type": "AI_Spawner",
+            "ObjId": 163,
+            "metadata/_custom_type_script": "uid://61fqysc1cbuw",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -208.297,
+                "y": 138.6,
+                "z": 210.537
+            },
+            "id": "AI_Spawner64"
+        },
+        {
+            "name": "InteractPoint",
+            "type": "InteractPoint",
+            "ObjId": 800,
+            "metadata/_custom_type_script": "uid://fqa8c4wlrudj",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -199.92,
+                "y": 140.297,
+                "z": 228.452
+            },
+            "id": "InteractPoint"
+        },
+        {
+            "name": "InteractPoint2",
+            "type": "InteractPoint",
+            "ObjId": 801,
+            "metadata/_custom_type_script": "uid://fqa8c4wlrudj",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -457.334,
+                "y": 154.571,
+                "z": 275.485
+            },
+            "id": "InteractPoint2"
+        },
+        {
+            "name": "VehicleSpawner",
+            "ObjId": 700,
+            "VehicleType": "M2Bradley",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -220.434,
+                "y": 143.512,
+                "z": 324.956
+            },
+            "id": "VehicleSpawner"
+        },
+        {
+            "name": "VehicleSpawner3",
+            "ObjId": 700,
+            "VehicleType": "F16",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": -0.849359,
+                "y": 0,
+                "z": 0.527816
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.527816,
+                "y": 0,
+                "z": -0.849359
+            },
+            "position": {
+                "x": -195.966,
+                "y": 143.512,
+                "z": 279.859
+            },
+            "id": "VehicleSpawner3"
+        },
+        {
+            "name": "VehicleSpawner16",
+            "ObjId": 700,
+            "VehicleType": "SU57",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": -0.849359,
+                "y": 0,
+                "z": 0.527816
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.527816,
+                "y": 0,
+                "z": -0.849359
+            },
+            "position": {
+                "x": -198.982,
+                "y": 143.512,
+                "z": 253.411
+            },
+            "id": "VehicleSpawner16"
+        },
+        {
+            "name": "VehicleSpawner2",
+            "ObjId": 701,
+            "VehicleType": "CV90",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -203.2,
+                "y": 143.129,
+                "z": 306.291
+            },
+            "id": "VehicleSpawner2"
+        },
+        {
+            "name": "VehicleSpawner4",
+            "ObjId": 701,
+            "VehicleType": "F22",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": -0.998509,
+                "y": 0,
+                "z": 0.0545842
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.0545842,
+                "y": 0,
+                "z": -0.998509
+            },
+            "position": {
+                "x": -237.438,
+                "y": 143.129,
+                "z": 256.376
+            },
+            "id": "VehicleSpawner4"
+        },
+        {
+            "name": "VehicleSpawner6",
+            "ObjId": 701,
+            "VehicleType": "Eurocopter",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -254.391,
+                "y": 140.051,
+                "z": 290.694
+            },
+            "id": "VehicleSpawner6"
+        },
+        {
+            "name": "VehicleSpawner7",
+            "ObjId": 701,
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -264.046,
+                "y": 140.051,
+                "z": 309.133
+            },
+            "id": "VehicleSpawner7"
+        },
+        {
+            "name": "VehicleSpawner8",
+            "ObjId": 701,
+            "VehicleType": "Cheetah",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -280.372,
+                "y": 140.051,
+                "z": 318.968
+            },
+            "id": "VehicleSpawner8"
+        },
+        {
+            "name": "VehicleSpawner9",
+            "ObjId": 701,
+            "VehicleType": "Vector",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -268.638,
+                "y": 140.051,
+                "z": 329.856
+            },
+            "id": "VehicleSpawner9"
+        },
+        {
+            "name": "VehicleSpawner10",
+            "ObjId": 701,
+            "VehicleType": "UH60",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -256.172,
+                "y": 140.051,
+                "z": 329.856
+            },
+            "id": "VehicleSpawner10"
+        },
+        {
+            "name": "VehicleSpawner11",
+            "ObjId": 701,
+            "VehicleType": "Leopard",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -247.112,
+                "y": 140.051,
+                "z": 344.022
+            },
+            "id": "VehicleSpawner11"
+        },
+        {
+            "name": "VehicleSpawner12",
+            "ObjId": 701,
+            "VehicleType": "Gepard",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -233.267,
+                "y": 140.051,
+                "z": 344.022
+            },
+            "id": "VehicleSpawner12"
+        },
+        {
+            "name": "VehicleSpawner13",
+            "ObjId": 701,
+            "VehicleType": "Quadbike",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -241.222,
+                "y": 140.051,
+                "z": 331.814
+            },
+            "id": "VehicleSpawner13"
+        },
+        {
+            "name": "VehicleSpawner14",
+            "ObjId": 701,
+            "VehicleType": "Flyer60",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -238.617,
+                "y": 140.051,
+                "z": 339.223
+            },
+            "id": "VehicleSpawner14"
+        },
+        {
+            "name": "VehicleSpawner15",
+            "ObjId": 701,
+            "VehicleType": "AH64",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -229.441,
+                "y": 140.051,
+                "z": 357.614
+            },
+            "id": "VehicleSpawner15"
+        },
+        {
+            "name": "VehicleSpawner5",
+            "ObjId": 701,
+            "VehicleType": "JAS39",
+            "P_AutoSpawnEnabled": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 0.476254,
+                "y": 0,
+                "z": -0.879308
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.879308,
+                "y": 0,
+                "z": 0.476254
+            },
+            "position": {
+                "x": -228.513,
+                "y": 142.197,
+                "z": 210.885
+            },
+            "id": "VehicleSpawner5"
+        }
+    ],
+    "Static": [
+        {
+            "name": "MP_Granite_TechCampus_Portal_Terrain",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Granite_TechCampus_Portal_Terrain",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Granite_TechCampus_Portal_Terrain"
+        },
+        {
+            "name": "MP_Granite_TechCampus_Portal_Assets",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Granite_TechCampus_Portal_Assets",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Granite_TechCampus_Portal_Assets"
+        }
+    ]
+}

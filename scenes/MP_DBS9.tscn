@@ -1,0 +1,609 @@
+[gd_scene load_steps=13 format=3 uid="uid://de7a5a0jg4rg0"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_1l1mm"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_mm1fc"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_4vkkq"]
+[ext_resource type="Script" uid="uid://61fqysc1cbuw" path="res://scripts/Gameplay/AI/AI_Spawner.gd" id="4_wbyyp"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="5_hkwq8"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="6_yl0eb"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_TechCampus_Portal_Terrain.tscn" id="7_q4g60"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_TechCampus_Portal_Assets.tscn" id="8_k142g"]
+[ext_resource type="Script" uid="uid://fqa8c4wlrudj" path="res://scripts/Gameplay/Common/InteractPoint.gd" id="9_7r7nq"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/VehicleSpawner.tscn" id="10_mpxfu"]
+[ext_resource type="Script" uid="uid://cqlmqsy4w0x6e" path="res://scripts/entities/SpawnPoint.gd" id="11_mm1fc"]
+[ext_resource type="PackedScene" path="res://objects/Global/Generic/Industrial/Architecture/ConstructionSetPillar01_A_128x512x128.tscn" id="12_4vkkq"]
+
+[node name="MP_Granite_TechCampus_Portal" type="Node3D"]
+
+[node name="TEAM_1_HQ" parent="." node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_1l1mm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -216.984, 138.472, 230.02)
+AltTeam = 0
+ObjId = 1
+HQArea = NodePath("HQ_Team1")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+
+[node name="HQ_Team1" parent="TEAM_1_HQ" instance=ExtResource("2_mm1fc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_1_1" parent="TEAM_1_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.424342, 0, 0.905502, 0, 1, 0, -0.905502, 0, -0.424342, 0, 0, -3)
+
+[node name="SpawnPoint_1_2" parent="TEAM_1_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.735388, 0, 0.677647, 0, 1, 0, -0.677647, 0, -0.735388, 3, 0, 0)
+
+[node name="SpawnPoint_1_3" parent="TEAM_1_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.562949, 0, 0.826492, 0, 1, 0, -0.826492, 0, -0.562949, -3, 0, 0)
+
+[node name="SpawnPoint_1_4" parent="TEAM_1_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.823869, 0, 0.56678, 0, 1, 0, -0.56678, 0, -0.823869, 0, 0, 3)
+
+[node name="TEAM_2_HQ" parent="." node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_1l1mm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -215.896, 138.671, 231.746)
+Team = 2
+AltTeam = 0
+ObjId = 2
+HQArea = NodePath("HQ_Team2")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+
+[node name="HQ_Team2" parent="TEAM_2_HQ" instance=ExtResource("2_mm1fc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_2_1" parent="TEAM_2_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.888145, 0, 0.459565, 0, 1, 0, -0.459565, 0, -0.888145, 0, 0, -3)
+
+[node name="SpawnPoint_2_2" parent="TEAM_2_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.844374, 0, 0.535753, 0, 1, 0, -0.535753, 0, -0.844374, 3, 0, 0)
+
+[node name="SpawnPoint_2_3" parent="TEAM_2_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.73736, 0, 0.6755, 0, 1, 0, -0.6755, 0, -0.73736, -3, 0, 0)
+
+[node name="SpawnPoint_2_4" parent="TEAM_2_HQ" instance=ExtResource("3_4vkkq")]
+transform = Transform3D(-0.760156, 0, 0.64974, 0, 1, 0, -0.64974, 0, -0.760156, 0, 0, 3)
+
+[node name="CombatArea" parent="." node_paths=PackedStringArray("CombatVolume") instance=ExtResource("5_hkwq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.415, 136.643, 352.408)
+CombatVolume = NodePath("CombatVolume")
+
+[node name="CombatVolume" parent="CombatArea" instance=ExtResource("2_mm1fc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.725, -10, -123.56)
+points = PackedVector2Array(-293.381, -331.248, -424.785, -242.921, -458.859, -3.18711, -423.592, 262.611, -255.656, 475.573, 40.0561, 537.636, 288.308, 423.245, 334.552, 101.977, 305.369, -99.3241, 199.497, -242.921, 116.746, -302.55, -135.181, -373.84)
+height = 100.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.101056, 0.994881, 0, -0.994881, 0.101056, -218.643, 501.636, 311.623)
+
+[node name="DeployCam" parent="Camera3D" instance=ExtResource("6_yl0eb")]
+
+[node name="Static" type="Node3D" parent="."]
+
+[node name="MP_Granite_TechCampus_Portal_Terrain" parent="Static" instance=ExtResource("7_q4g60")]
+metadata/_edit_lock_ = true
+
+[node name="MP_Granite_TechCampus_Portal_Assets" parent="Static" instance=ExtResource("8_k142g")]
+metadata/_edit_lock_ = true
+
+[node name="AI_Spawner" type="Node3D" parent="." node_paths=PackedStringArray("AlternateSpawns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -201.83, 138, 215.466)
+script = ExtResource("4_wbyyp")
+ObjId = 100
+AlternateSpawns = [NodePath("")]
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner2" type="Node3D" parent="AI_Spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 101
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner3" type="Node3D" parent="AI_Spawner/AI_Spawner2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 102
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner4" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 103
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner5" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 104
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner6" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 105
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner7" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 106
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner8" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 107
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner9" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 108
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner10" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 109
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner11" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 110
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner12" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 111
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner13" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 112
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner14" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 113
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner15" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 114
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner16" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 115
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner17" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 116
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner18" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 117
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner19" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 118
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner20" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 119
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner21" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 120
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner22" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 121
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner23" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 122
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner24" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 123
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner25" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 124
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner26" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 125
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner27" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 126
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner28" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 127
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner29" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 128
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner30" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 129
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner31" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 130
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner32" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 131
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner33" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 132
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner34" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 133
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner35" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 134
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner36" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 135
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner37" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 136
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner38" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 137
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner39" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 138
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner40" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 139
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner41" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 140
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner42" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 141
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner43" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 142
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner44" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 143
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner45" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 144
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner46" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 145
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner47" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 146
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner48" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 147
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner49" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 148
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner50" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 149
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner51" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 150
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner52" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 151
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner53" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 152
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner54" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 153
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner55" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 154
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner56" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 155
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner57" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 156
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner58" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56/AI_Spawner57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 157
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner59" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56/AI_Spawner57/AI_Spawner58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 158
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner60" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56/AI_Spawner57/AI_Spawner58/AI_Spawner59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 159
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner61" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56/AI_Spawner57/AI_Spawner58/AI_Spawner59/AI_Spawner60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 160
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner62" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56/AI_Spawner57/AI_Spawner58/AI_Spawner59/AI_Spawner60/AI_Spawner61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 161
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner63" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56/AI_Spawner57/AI_Spawner58/AI_Spawner59/AI_Spawner60/AI_Spawner61/AI_Spawner62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 162
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="AI_Spawner64" type="Node3D" parent="AI_Spawner/AI_Spawner2/AI_Spawner3/AI_Spawner4/AI_Spawner5/AI_Spawner6/AI_Spawner7/AI_Spawner8/AI_Spawner9/AI_Spawner10/AI_Spawner11/AI_Spawner12/AI_Spawner13/AI_Spawner14/AI_Spawner15/AI_Spawner16/AI_Spawner17/AI_Spawner18/AI_Spawner19/AI_Spawner20/AI_Spawner21/AI_Spawner22/AI_Spawner23/AI_Spawner24/AI_Spawner25/AI_Spawner26/AI_Spawner27/AI_Spawner28/AI_Spawner29/AI_Spawner30/AI_Spawner31/AI_Spawner32/AI_Spawner33/AI_Spawner34/AI_Spawner35/AI_Spawner36/AI_Spawner37/AI_Spawner38/AI_Spawner39/AI_Spawner40/AI_Spawner41/AI_Spawner42/AI_Spawner43/AI_Spawner44/AI_Spawner45/AI_Spawner46/AI_Spawner47/AI_Spawner48/AI_Spawner49/AI_Spawner50/AI_Spawner51/AI_Spawner52/AI_Spawner53/AI_Spawner54/AI_Spawner55/AI_Spawner56/AI_Spawner57/AI_Spawner58/AI_Spawner59/AI_Spawner60/AI_Spawner61/AI_Spawner62/AI_Spawner63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+script = ExtResource("4_wbyyp")
+ObjId = 163
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="InteractPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -199.92, 140.297, 228.452)
+script = ExtResource("9_7r7nq")
+ObjId = 800
+metadata/_custom_type_script = "uid://fqa8c4wlrudj"
+
+[node name="InteractPoint2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -457.334, 154.571, 275.485)
+script = ExtResource("9_7r7nq")
+ObjId = 801
+metadata/_custom_type_script = "uid://fqa8c4wlrudj"
+
+[node name="VehicleSpawner" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -220.434, 143.512, 324.956)
+ObjId = 700
+VehicleType = 16
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner3" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(-0.849359, 0, -0.527816, 0, 1, 0, 0.527816, 0, -0.849359, -195.966, 143.512, 279.859)
+ObjId = 700
+VehicleType = 15
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner16" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(-0.849359, 0, -0.527816, 0, 1, 0, 0.527816, 0, -0.849359, -198.982, 143.512, 253.411)
+ObjId = 700
+VehicleType = 17
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner2" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -203.2, 143.129, 306.291)
+ObjId = 701
+VehicleType = 3
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner4" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(-0.998509, 0, -0.0545842, 0, 1, 0, 0.0545842, 0, -0.998509, -237.438, 143.129, 256.376)
+ObjId = 701
+VehicleType = 14
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner6" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -254.391, 140.051, 290.694)
+ObjId = 701
+VehicleType = 6
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner7" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -264.046, 140.051, 309.133)
+ObjId = 701
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner8" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -280.372, 140.051, 318.968)
+ObjId = 701
+VehicleType = 2
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner9" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -268.638, 140.051, 329.856)
+ObjId = 701
+VehicleType = 8
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner10" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256.172, 140.051, 329.856)
+ObjId = 701
+VehicleType = 5
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner11" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247.112, 140.051, 344.022)
+ObjId = 701
+VehicleType = 1
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner12" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -233.267, 140.051, 344.022)
+ObjId = 701
+VehicleType = 4
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner13" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -241.222, 140.051, 331.814)
+ObjId = 701
+VehicleType = 9
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner14" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -238.617, 140.051, 339.223)
+ObjId = 701
+VehicleType = 12
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner15" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -229.441, 140.051, 357.614)
+ObjId = 701
+VehicleType = 7
+P_AutoSpawnEnabled = true
+
+[node name="VehicleSpawner5" parent="." instance=ExtResource("10_mpxfu")]
+transform = Transform3D(0.476254, 0, 0.879308, 0, 1, 0, -0.879308, 0, 0.476254, -228.513, 142.197, 210.885)
+ObjId = 701
+VehicleType = 13
+P_AutoSpawnEnabled = true
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -201.83, 138.6, 215.466)
+
+[node name="AI_Spawner2" type="Node3D" parent="." node_paths=PackedStringArray("AlternateSpawns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -208.303, 138.6, 219.516)
+script = ExtResource("4_wbyyp")
+ObjId = 900
+AlternateSpawns = [NodePath("../SpawnPoint")]
+metadata/_custom_type_script = "uid://61fqysc1cbuw"
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -199.436, 138.6, 235.6)
+script = ExtResource("11_mm1fc")
+ObjId = 901
+metadata/_custom_type_script = "uid://cqlmqsy4w0x6e"
+
+[node name="ConstructionSetPillar01_A_128x512x128" parent="." instance=ExtResource("12_4vkkq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -189.9, 142.044, 224.659)
+ObjId = 1000
+
+[node name="InteractPoint3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -197.949, 139.91, 223.229)
+script = ExtResource("9_7r7nq")
+ObjId = 802
+metadata/_custom_type_script = "uid://fqa8c4wlrudj"
+
+[node name="InteractPoint4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196.363, 139.91, 219.947)
+script = ExtResource("9_7r7nq")
+ObjId = 803
+metadata/_custom_type_script = "uid://fqa8c4wlrudj"
